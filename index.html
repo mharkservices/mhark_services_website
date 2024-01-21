@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>MHARK SERVICES</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>   
+    
+  </head>
+<body>
+  
+    <header id="mainNav">
+      <div  onclick="topFunction()" id="home-logo">
+          <a class="logo" href="#">
+              <img src="img/logo.jpg">
+              <h1>MHARK SERVICES</h1>
+          </a>
+      </div>
+      <nav>
+          <ul class="nav_links">
+
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg></i></a>
+              <ul class="services-dropdown">
+                  <li><a href="#services" onclick="showTab('tab-1','pill-1')">Registrtion</a></li>
+                  <li><a href="#services" onclick="showTab('tab-2','pill-2')">Filling</a></li>
+                  <li><a href="#services" onclick="showTab('tab-3','pill-3')">Other Services</a></li>
+              </ul>
+              </li>
+              <li><a href="#dsc">DSC</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          
+          <div class="nav-bar" onclick="mobileNav()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+
+      </nav>
+  </header>
+
+  <div>
+    <ul id="nav-mobile" class="nav-mobile">
+      <div onclick="removeMobileNav()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </div>
+      <li onclick="removeMobileNav()"><a href="#about">About Us</a></li>
+      <li onclick="removeMobileNav()"><a href="#services">Services<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg></i></a>
+      <ul>
+          <li><a href="#services" onclick="showTab('tab-1','pill-1')">Registrtion</a></li>
+          <li><a href="#services" onclick="showTab('tab-2','pill-2')">Filling</a></li>
+          <li><a href="#services" onclick="showTab('tab-3','pill-3')">Other Services</a></li>
+      </ul>
+      </li>
+      <li onclick="removeMobileNav()"><a href="#dsc">DSC</a></li>
+      <li onclick="removeMobileNav()"><a href="#contact">Contact Us</a></li>
+    
+    </ul>
+  </div>
+
+  <main>
+      <section  class="hero-animated">
+              <img src="img/home-image.svg">
+              <div class="text-content">
+                  <h2>Welcome to <span>MHARK SERVICES </span></h2>
+                  <p>Streamline Your Financial Journey with Expert Accounting Services, Registrations, and Digital Signatures.</p>
+                  <a href="#about"><span class="btn-get-started">About Us</span></a>
+              </div>
+      </section>
+      
+      <section id="about" >
+          <div class="about">
+    
+            <div class="section-header">
+              <h2>About Us</h2>
+              <p>We work towards customer satisfaction and make sure our services are hassle- free and more affordable.</p>
+            </div>
+    
+            <div class="row g-4 g-lg-5" >
+    
+              <div class="col-lg-5">
+                <div class="about-img">
+                  <img src="img/about.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+    
+              <div class="col-lg-7">
+                  <h3 class="pt-0 pt-lg-5">Simplify Your Financial Management with Expert Accounting Services</h3>
+      
+                  <div class="tab-content">
+      
+                    <div class="tab-pane fade show active" id="tab1">
+      
+                      <p class="fst-italic">At MHARK SERVICES, we offer comprehensive registration services to help businesses establish a solid foundation. From company registration and business licensing to tax registrations and compliance, we streamline the registration process, saving you time and effort. Our expert team ensures all legal requirements are met, enabling you to focus on growing your business confidently.</p>
+      
+                      <div class="d-flex align-items-center mt-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ff6600" class="bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        <h4>Efficient and Accurate Filing Services</h4>
+                      </div>
+                      <p>We understand the importance of efficient and accurate filing in maintaining financial transparency and compliance. Our experienced professionals meticulously handle the complexities of filing, ensuring your tax returns, financial statements, and other regulatory filings are submitted on time and in accordance with the relevant guidelines.</p>
+      
+                      <div class="d-flex align-items-center mt-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ff6600" class="bi bi-check" viewBox="0 0 16 16">
+                              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        <h4>Additional Services for Seamless Financial Management</h4>
+                      </div>
+                      <p>In addition to our core registration and filing services, we provide valuable solutions such as digital signatures and trademark objection filing. Our digital signature services offer a secure and convenient way to authenticate and sign documents electronically, reducing paperwork and enhancing efficiency. Furthermore, we assist you in safeguarding your intellectual property rights through trademark objection filing. At MHARK SERVICES, we are committed to providing comprehensive services that go beyond traditional accounting, empowering your business for long-term success.</p>
+      
+                    </div>
+                  </div>
+      
+                </div>
+            </div>
+    
+          </div>
+        </section>
+
+        <section id="clients" class="clients">
+          <div class="container" data-aos="zoom-out">
+    
+            <div class="clients-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="img/clients/client-8.png" class="img-fluid" alt=""></div>
+              </div>
+            </div>
+    
+          </div>
+        </section>
+    
+
+        <section id="services" class="services">
+          <div class="section-header">
+            <h2>Services We Provide</h2>
+            <p>We work towards customer satisfaction and make sure our services are hassle-free and more affordable.</p>
+          </div>
+          <div class="container" data-aos="fade-up">
+
+
+            <div class="d-flex justify-content-center">
+              <ul class="nav">
+                <li ><a class="nav-pills active" onclick="showTab('tab-1','pill-1')" id="pill-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                  </svg>
+                  Registration
+                </a></li>
+                <li ><a class="nav-pills" onclick="showTab('tab-2','pill-2')" id="pill-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-folder-check" viewBox="0 0 16 16">
+                    <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                    <path d="M15.854 10.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.707 0l-1.5-1.5a.5.5 0 0 1 .707-.708l1.146 1.147 2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                  Filing
+                </a></li>
+                <li ><a class="nav-pills" onclick="showTab('tab-3','pill-3')" id="pill-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                    <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                    <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                  Other Services
+                </a></li>
+              </ul>
+            </div>
+              <div class="services-tab-content active" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Registration</h3>
+                    <p >
+                      We offer efficient and streamlined registration services to help you establish your business or organization legally. 
+                      From company registrations to obtaining necessary licenses and permits, we handle the paperwork
+                      so you can focus on your core operations.
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <ul class="no-bullets">
+                          <li>Company Registration</li>
+                          <li></i>LLP Registration</li>
+                          <li>Partnership Firm Registration</li>
+                          <li>GST Registration</li>
+                          <li>UDYAM Registration</li>
+                          <li>GEM Registration</li>
+                          <li>IEC Registration</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="no-bullets">
+                          <li>ISO Registration</li>
+                          <li>NITI Aayog Registration</li>
+                          <li>NGO &amp; Trust Registration</li>
+                          <li>PF &amp; ESI Registration</li>
+                          <li>Trademark Registration</li>
+                          <li>StartupIndia Registration</li>
+                          <li>FSSAI Registration</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <br>
+                    <img src="img/features-1.svg"  class="img-fluid animated">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="services-tab-content" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 order-2 order-lg-1">
+                    <h3>Filing</h3>
+                    <p>
+                     Our filing services ensure that all your important documents and forms are submitted accurately and on time. 
+                     We handle various types of filings, including tax returns, compliance forms,
+                     and regulatory filings, making sure you meet your legal obligations effortlessly.
+                    </p>
+                    
+                    <ul class="no-bullets">
+                      <li>Income Tax Filing</li>
+                      <li>GST Return Filing</li>
+                      <li>PF &amp; ESI Filing</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 order-1 order-lg-2 text-center">
+                    <img src="img/features-2.svg"  class="img-fluid animated">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="services-tab-content" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 order-2 order-lg-1">
+                    <h3>Other Services Include</h3>
+                    <p>
+                      In addition to registration and filing, we provide a range of other services to support your business needs. 
+                      This includes digital signatures, which offer secure and convenient electronic authentication, 
+                      as well as assistance with trademark objection filing to protect your intellectual property rights. 
+                      Our goal is to provide comprehensive solutions that help you navigate the complexities of business 
+                      administration efficiently.
+                    </p>
+                    <ul class="no-bullets">
+                      <li>All Types of Digital Signature Certificates(DSC)</li>
+                      <li>Trademark Objection Filing</li>
+                      <li>80G &amp; 12A Registration</li>
+                      <li>PAN and TAN</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 order-1 order-lg-2 text-center">
+                    <img src="img/features-3.svg" class="img-fluid animated">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </section>
+
+
+      <section class="testimonial-section">
+
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+           </div>
+          <div class="carousel-inner testimonials">
+            <div class="carousel-item active">
+              <div class=" d-block w-100" >
+                <div class="testimonial-item">
+                  <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>James Watson</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    ""I used to dread tax season, but MHARK SERVICES has made the process so much easier and stress-free. Their team is knowledgeable and professional."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class=" d-block w-100" >
+                <div class="testimonial-item">
+                  <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Customer</h4>
+                  <p>
+                    ""As a small business owner, I rely on MHARK SERVICES to keep my finances in order. Their attention to detail and personalized service is top-notch."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class=" d-block w-100" >
+                <div class="testimonial-item">
+                  <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Janne Willim</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    "I was impressed with the thoroughness of MHARK SERVICES's tax experts. They helped me maximize my deductions and minimize my liabilities"</i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+  
+          <div class="section-header">
+            <h2>Contact Us</h2>
+          </div>
+  
+        </div>
+  
+  
+        <div class="container">
+  
+          <div class="row gy-5 gx-lg-5 align-content-center justify-content-center">
+  
+            <div class="col-lg-4">
+  
+              <div class="info">
+                <h3>Get in touch</h3>
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    
+                    <h4>Location:</h4>
+                    
+                    <p>2-32, Nizampet Rd, Jai Bharat Nagar, Hyder Nagar, 
+                    Nagarjuna Homes, Kukatpally, Hyderabad, Telangana 500085</p>
+                  </div>
+                </div>
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h4>Email:</h4>
+                    <p>info@aydiv.in</p>
+                  </div>
+                </div>
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-phone flex-shrink-0"></i>
+                  <div>
+                    <h4>Call:</h4>
+                    <p>+91 8977621612</p>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-8 ">
+    <div style="position: relative; padding-bottom: 79%; height: 0;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmp4Vb3qBI3JTnZYSRn2rBuBxDNotaa-KlgdgZBpzdcHBGCA/viewform?embedded=true"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="contact form"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
+    </div>
+  </div>
+  
+          </div>
+  
+        </div>
+      </section>
+  </main>
+  
+
+  <footer id="footer" class="footer">
+
+
+    <div class="footer-content">
+      <div class="container">
+
+        <div class="row">
+
+
+          <div class="social-links col-lg-4 col-md-6 footer-links">
+            <a href="#" class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+            </svg></i></a>
+            <a href="#" class="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></i></a>
+            <a href="#" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg></i></a>
+            <a href="#" class="google-plus"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-skype" viewBox="0 0 16 16">
+              <path d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z"/>
+            </svg></i></a>
+            <a href="#" class="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+            </svg></i></a>
+            <a href="#" class="whatsapp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg></a>
+          </div>
+
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>Home</a></li>
+              <li><a href="#about" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>About us</a></li>
+              <li><a href="#services"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#services" onclick="showTab('tab-1','pill-1')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>Registration</a></li>
+              <li><a href="#services" onclick="showTab('tab-2','pill-2')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>Filing</a></li>
+              <li> <a href="#services" onclick="showTab('tab-3','pill-3')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>Others</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+        
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.056601496566!2d78.3872803!3d17.5048113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f9cb6fc9c5%3A0x171f27476c885cf3!2s232%2C%20Nizampet%20Rd%2C%20Nagarjuna%20Homes%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500090!5e0!3m2!1sen!2sin!4v1689942295429!5m2!1sen!2sin" width="90%" height="400" style="border:0; margin:5%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    <div class="footer-legal">
+      
+          <div class="copyright ">
+            &copy; 2023 MHARK SERVICES. All rights reserved.
+          </div>
+          
+        
+    </div>
+    
+
+  </footer>
+
+  <a href="#" id ="scroll-top-btn" onclick="topFunction()" class="scroll-top d-flex align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+  </svg></i></a>
+
+     
+
+     
+        
+</body>
+</html>
