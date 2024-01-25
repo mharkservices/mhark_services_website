@@ -87,6 +87,13 @@ header.scrolled{
     opacity: 1.2;
   }
 
+  .nav_links li a:active{
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 1.2;
+  }
+
 
 .nav_links li{
     display: inline-block;
@@ -132,6 +139,7 @@ header.scrolled{
   padding: 10px;
   transition: background-color 0.3;
 }
+
 .services-dropdown li:hover a{
   color: #fff;
 }
@@ -470,36 +478,58 @@ header.scrolled{
     }
   }
   
-
-  .clients-slider {
+  .companies{
     overflow: hidden;
+    padding: 60px 0;
+    background-color: #fff;
+    white-space: nowrap;
     position: relative;
-    width: 100%; 
-    border-radius: 20px;
+}
 
-  }
-  
-  .swiper-wrapper {
-    display: flex;
-    animation: slideRightToLeft 12s linear infinite; 
-  }
-  
-  .swiper-slide {
-    flex-shrink: 0;
+@keyframes slide {
+    From{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
     
-    margin: 30px;
-    width: 16.66%; 
-    overflow: hidden;
-  }
-  
-  @keyframes slideRightToLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%); 
-    }
-  }
+}
+
+.companies::before,
+.companies::after{
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    content: "";
+}
+
+.companies::before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255,255,255,0),#ffff);
+}
+
+.companies::after{
+    right: 0;
+    background: linear-gradient(to right,rgba(255,255,255,0),#ffff);
+}
+
+
+.companies:hover .companies-slider{
+    animation-play-state: paused;
+}
+.companies-slider{
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+.companies-slider img{
+    height: 50px;
+    margin: 0px 30px;
+}
+
+
   
 .section-header{
   text-align: center;

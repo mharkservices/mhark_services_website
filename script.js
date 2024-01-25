@@ -52,4 +52,3 @@ function removeMobileNav(){
   var x = document.getElementById("nav-mobile");
   x.classList.remove('active')
 }
-
