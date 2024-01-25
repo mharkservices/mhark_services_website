@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const heroElement = document.querySelector(".hero-animated");
-    heroElement.classList.add("fade-in");
+    heroElement.classList.add("fadeIn");
   });
 
   window.addEventListener('scroll', () => {
@@ -52,3 +52,27 @@ function removeMobileNav(){
   var x = document.getElementById("nav-mobile");
   x.classList.remove('active')
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".fade-in-ani");
+
+  function checkScroll() {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight * 0.75) {
+        section.classList.add("active");
+      }
+    });
+  }
+
+  // Initial check on page load
+  checkScroll();
+
+  // Listen for scroll events
+  document.addEventListener("scroll", function () {
+    checkScroll();
+  });
+});

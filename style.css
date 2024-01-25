@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+@import url('animations.css');
 
 *{
     font-family: 'Nunito',sans-serif;
@@ -16,7 +16,7 @@ main{
 }
 
 
-header {
+header{
   max-width: 1400px;
   width: 100%;
   padding: 0px 10px;
@@ -29,9 +29,10 @@ header {
   left: 0;
   right: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 3;
   
 }
+
 
 header.scrolled{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -166,28 +167,58 @@ header.scrolled{
 }
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; 
+  }
+}
+
+
+
 .hero-animated {
   background-image: url("/img/hero-bg.png");
   background-size: cover;
-  opacity: 0;
-  transition: opacity 1s;
   padding-left: 10px;
   max-width: 1400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  animation: fadeIn 3s ease-in-out;
 }
 
-.hero-animated.fade-in {
-    opacity: 1;
-  }
   
   
   .hero-animated img {
     max-width: 100%;
     height: auto;
-    animation: floatImage 3s ease-in-out infinite;
+    animation: floatImage 3s infinite,slide-in 2s;
   }
+
+
+
+  @keyframes slide-in {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes slide-out {
+  from{
+      transform: translateX(100%);
+  }
+  to{
+      transform: translateX(0);
+  }
+  
+}
+
   
   @keyframes floatImage {
     0% {
@@ -200,13 +231,24 @@ header.scrolled{
       transform: translateY(0);
     }
     
+    
   }
 
+  .fade-in-ani {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in-ani.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
   
 
   .text-content{
     width: 600px;
-
+    animation: slide-out 2s;
     text-align: center;
     margin-right: 10px;
     align-self: center;
@@ -327,7 +369,7 @@ header.scrolled{
     display: none;
   }
 
-  .nav-mobile li:active ul{
+  .nav-mobile li:hover ul{
     transition: all .5 ease;
     display: block;
     position: relative;

@@ -1,97 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      height: 150vh; /* Ensures enough scrollable space */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-    <style>
-        *{
-            margin: 0%;
-            padding: 0%;
-        }
-        body{
-            background-color: #333;
-        }
-        .companies{
-            overflow: hidden;
-            padding: 60px 0;
-            background-color: #fff;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        @keyframes slide {
-            From{
-                transform: translateX(0);
-            }
-            to{
-                transform: translateX(-100%);
-            }
-            
-        }
-
-        .companies::before,
-        .companies::after{
-            width: 250px;
-            height: 100%;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            content: "";
-        }
-
-        .companies::before{
-            left: 0;
-            background: linear-gradient(to left,rgba(255,255,255,0),#ffff);
-        }
-
-        .companies::after{
-            right: 0;
-            background: linear-gradient(to right,rgba(255,255,255,0),#ffff);
-        }
-
-
-        .companies:hover .companies-slider{
-            animation-play-state: paused;
-        }
-        .companies-slider{
-            display: inline-block;
-            animation: 20s slide infinite linear;
-        }
-        .companies-slider img{
-            height: 50px;
-            margin: 0px 30px;
-        }
-
-        
-        
-    </style>
-
-
+    .animated-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+  </style>
 </head>
 <body>
-    <section>
 
-    <div class="companies">
-        <div  class="companies-slider">
-            <img src="img/clients/client-1.png">
-            <img src="img/clients/client-2.png">
-            <img src="img/clients/client-3.png">
-            <img src="img/clients/client-4.png">
-            <img src="img/clients/client-5.png">
-            <img src="img/clients/client-6.png">
-            <img src="img/clients/client-7.png">
-            <img src="img/clients/client-8.png">
-        </div>
-        
-    </div>
-</section>
+  <div class="animated-element">Scroll down to see the animation</div>
 
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        // Get the current scroll position
+        var scrollPosition = $(window).scrollTop();
 
-<script>
-    var copy = document.querySelector(".companies-slider").cloneNode(true);
-    document.querySelector(".companies").appendChild(copy);
-</script>
+        // Check if the scroll position is below a certain value (adjust as needed)
+        if (scrollPosition > 100) {
+          // Apply the animation when scrolled
+          $(".animated-element").css({
+            opacity: 1,
+            transform: "translateY(0)"
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
