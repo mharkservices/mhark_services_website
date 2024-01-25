@@ -3,43 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Animation</title>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Dynamic Column Layout</title>
   <style>
-    body {
-      height: 150vh; /* Ensures enough scrollable space */
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    /* Resetting default styles for better consistency */
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-    .animated-element {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s, transform 0.5s;
-    }
+/* Define the dynamic columns layout */
+.dynamic-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Define the styling for each list item */
+.dynamic-columns li {
+  box-sizing: border-box;
+  width: calc(100% / 1); /* By default, 1 column */
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Change layout to 2 columns if there are more than 8 elements */
+.dynamic-columns li:nth-child(n+9) {
+  width: calc(100% / 2); /* 2 columns */
+}
+
+/* Add more media queries or rules as needed for additional column configurations */
+
   </style>
 </head>
 <body>
-
-  <div class="animated-element">Scroll down to see the animation</div>
-
-  <script>
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        // Get the current scroll position
-        var scrollPosition = $(window).scrollTop();
-
-        // Check if the scroll position is below a certain value (adjust as needed)
-        if (scrollPosition > 100) {
-          // Apply the animation when scrolled
-          $(".animated-element").css({
-            opacity: 1,
-            transform: "translateY(0)"
-          });
-        }
-      });
-    });
-  </script>
-
+  <ul class="dynamic-colum
+    <!-- Add more items as needed -->
+  </ul>
 </body>
 </html>

@@ -17,7 +17,7 @@ main{
 
 
 header{
-  max-width: 1400px;
+
   width: 100%;
   padding: 0px 10px;
   box-sizing: border-box;
@@ -114,15 +114,15 @@ header.scrolled{
     text-decoration: none;
     color: #333;
 }
-.nav_links li ul.services-dropdown li{
+.nav_links li:hover ul.services-dropdown li{
   display: block;
 }
 
-.services-dropdown{
+.nav_links li ul.services-dropdown{
   box-shadow:  0px 4px 8px 0px #c3c2c2;
   background-color: #fff;
   position: absolute;
-  z-index: 1500;
+  z-index: 10;
   display: none;
   border-radius: 10px;
   padding:10px;
@@ -133,7 +133,7 @@ header.scrolled{
 }
 
 
-.services-dropdown li:hover{
+.nav_links li:hover ul.services-dropdown li:hover{
   background-color: #ff6600;
   color: #fff;
   border-radius: 10px;
@@ -143,13 +143,70 @@ header.scrolled{
 
 .services-dropdown li:hover a{
   color: #fff;
+  text-decoration: none;
+  text-indent: 0%;
 }
 
 .services-dropdown li ul{
-  box-shadow: 0px 4px 8px 0px #c3c2c2;
+  width: 220px;
+  display: none;
+  box-shadow:  0px 4px 8px 0px #c3c2c2;
   background-color: #fff;
+  z-index: 10;
+  display: none;
+  border-radius: 10px;
+  padding:10px;
+  margin-top: 5px;
+  top: 0%;
+  right: 90%;
   position: absolute;
   
+  max-height: 400px; 
+  overflow-y: auto; 
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ddd; 
+
+}
+
+.services-dropdown li:hover ul{
+  display: block;
+}
+
+.registration-dropdown::-webkit-scrollbar {
+  width: 3px; 
+}
+
+.registration-dropdown::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 8px; 
+}
+
+@media (hover: none) {
+  .services-dropdown:hover .registration-dropdown {
+      display: block;
+  }
+}
+
+
+
+
+.services-dropdown li ul li{
+  width: 100%;
+}
+
+
+.services-dropdown li:hover ul li a{
+  width: 100%;
+  color: #333;
+  display: block;
+  padding:0%;
+  margin: 0 10px;
+}
+
+.services-dropdown li:hover ul li:hover a{
+  width: 100%;
+  color: #fff;
 }
 
 .nav-bar {
@@ -301,7 +358,7 @@ header.scrolled{
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   main{
     padding: 0px;
   }
@@ -365,33 +422,26 @@ header.scrolled{
     background-color: #ff6600;
     border-radius: 10px;
   }
-  .nav-mobile li ul{
+
+   
+    
+  #nav-dropdown {
     display: none;
-  }
-
-  .nav-mobile li:hover ul{
-    transition: all .5 ease;
-    display: block;
-    position: relative;
-    background-color: #485664;
-    list-style: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255,255,255)" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>');
+    position: flex;
+    width: 100%;
+    max-width: inherit;
     color: #fff;
-    margin-top: 10px;
+
+    list-style: none;
   }
 
-
-  .nav-mobile li.active ul{
-    transition: all .5 ease;
-    display: block;
+  #nav-mobile li {
     position: relative;
-    background-color: #485664;
-    list-style: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255,255,255)" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>');
-    color: #fff;
-    margin-top: 10px;
   }
 
-
-
+  #nav-dropdown li {
+    padding: 8px;
+  }
 
   .logo {
       display: flex;
@@ -826,14 +876,28 @@ header.scrolled{
   color: var(--color-secondary-light);
 }
 
-footer {
+
+#footer {
   width: 100%;
-   
-  margin: 0 auto; 
+  margin: auto; 
+  background-color: #f0f0f0; 
+  flex: 1; 
+  display: flex;
+  align-items: center;   
   background-color: #485664;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
 }
+
+.footer-content {
+  max-width: 1400px; 
+  width: 100%;
+  margin: 0 auto; 
+ 
+}
+
+
 .footer-links li{
   list-style: none;
   text-decoration: none;
@@ -841,7 +905,8 @@ footer {
   padding: 5px;
 }
 
-footer h4{
+
+.footer-content h4{
   padding-top: 40px;
   padding-left: 20px;
   color: #fff;
@@ -867,7 +932,7 @@ footer h4{
   padding: 6px;
 }
 
-footer iframe{
+.footer-content iframe{
   border-radius: 20px;
 }
 
