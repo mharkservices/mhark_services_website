@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('animations.css');
+
+html, body {
+  overflow-x: hidden;
+}
 
 *{
     font-family: 'Nunito',sans-serif;
@@ -13,24 +16,22 @@ main{
   width: 100%;
   box-sizing: border-box;
 }
-
-
-header{
-
+header {
   width: 100%;
   padding: 0px 10px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
   background-color: #fff;
   z-index: 3;
-  
 }
+
+
 
 
 header.scrolled{
@@ -38,29 +39,31 @@ header.scrolled{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
-.logo{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-
-
-.logo img{
-    height: 50px;
-}
-.logo h1{
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 300;
-	letter-spacing: normal;
-	color: #333;
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-decoration: none;
 }
+
+.logo img {
+  height: 50px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #333;
+  text-decoration: none;
+  margin: 0; 
+  margin-left: 6px; 
+}
+
 
 @media (min-width: 768px) {
   body {
@@ -243,6 +246,7 @@ header.scrolled{
   flex-direction: row;
   justify-content: center;
   animation: fadeIn 3s ease-in-out;
+  margin-top: 60px;
 }
 
   
@@ -355,6 +359,7 @@ header.scrolled{
 .about-image{
     margin: 30px;
 }
+
 
 
 @media only screen and (max-width: 768px) {
@@ -533,8 +538,8 @@ header.scrolled{
     
     }
   
-  .about{
-    padding: 35px 0px 20px 20px;
+  #about{
+    padding: 35px 20px 0px 20px;
   }
     
   .about .about-img {
