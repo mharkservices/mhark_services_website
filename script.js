@@ -54,15 +54,6 @@ function removeMobileNav(){
 }
 
 
-function navDropdown() {
-  var dropdown = document.getElementById("nav-dropdown");
-  if (dropdown.style.display === "block") {
-    dropdown.style.display = "none";
-  } else {
-    dropdown.style.display = "block";
-  }
-}
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".fade-in-ani");

@@ -11,7 +11,6 @@
 main{
   max-width: 1400px;
   width: 100%;
-  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -63,7 +62,7 @@ header.scrolled{
   text-decoration: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   body {
     display: flex;
     align-items: center;
@@ -358,9 +357,13 @@ header.scrolled{
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   main{
     padding: 0px;
+  }
+  body{
+    padding: 0%;
+    margin: 0%;
   }
   .hero-animated img {
     height: 40%;
@@ -396,6 +399,7 @@ header.scrolled{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: all 0.4s ease;
+    overflow-y: auto;
   }
 
   .nav-mobile.active{
@@ -407,7 +411,6 @@ header.scrolled{
     cursor: pointer;
   }
   .nav-mobile li{
-    width: fit-content;
     padding: 10px;
   }
 
@@ -421,17 +424,13 @@ header.scrolled{
   .nav-mobile li a:active {
     background-color: #ff6600;
     border-radius: 10px;
-  }
 
-   
+  }
     
   #nav-dropdown {
     display: none;
     position: flex;
-    width: 100%;
-    max-width: inherit;
     color: #fff;
-
     list-style: none;
   }
 
@@ -441,6 +440,12 @@ header.scrolled{
 
   #nav-dropdown li {
     padding: 8px;
+  }
+  #nav-dropdown-ul-other{
+    display: none;
+    position: flex;
+    color: #fff;
+    list-style: none;
   }
 
   .logo {
@@ -494,7 +499,7 @@ header.scrolled{
   }
   
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
   
     .nav_links{
       display: none;
@@ -560,7 +565,7 @@ header.scrolled{
     background-repeat: no-repeat;
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .about .about-img {
       margin: 30px 0 0 30px;
     }
@@ -706,7 +711,7 @@ header.scrolled{
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .section-header{
     padding: 45px 0px 10px 10px;
   }
@@ -724,7 +729,7 @@ header.scrolled{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
   .nav{
     flex-direction: column;
