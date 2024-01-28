@@ -10,9 +10,8 @@ html, body {
     padding: 0 ;
     box-sizing: border-box;
   }
-
   *:hover {
-    transition: all 0.4 s ease;
+    transition: all 0.3s ease;
 }
 
 main{
@@ -430,14 +429,24 @@ header.scrolled{
 
   }
     
-  #nav-dropdown {
+ 
+  #nav-dropdown-services,
+  #nav-dropdown-registration,
+  #nav-dropdown-fillings,
+  #nav-dropdown-others {
     display: none;
-    position: flex;
+    position: relative; /* or position: absolute; */
     color: #fff;
     list-style: none;
   }
-
-  #nav-mobile li {
+  
+  #nav-dropdown-services.active,
+  #nav-dropdown-registration.active,
+  #nav-dropdown-fillings.active,
+  #nav-dropdown-others.active {
+    display: block;
+  }
+   #nav-mobile li {
     position: relative;
   }
 

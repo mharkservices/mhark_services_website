@@ -77,3 +77,29 @@ document.addEventListener("DOMContentLoaded", function () {
     checkScroll();
   });
 });
+
+function toggleDropdown(menuId) {
+  var dropdown = document.getElementById('nav-dropdown-' + menuId);
+
+  if (!dropdown.classList.contains('active')) {
+    dropdown.classList.add('active');
+  } else {
+    dropdown.classList.remove('active');
+  }
+}
+
+function toggleDropdown2(menuId, parentId) {
+  var dropdown = document.getElementById('nav-dropdown-' + menuId);
+  var parentDropdown = document.getElementById('nav-dropdown-' + parentId);
+
+  if (parentDropdown) {
+    parentDropdown.classList.remove('active');
+  }
+
+  if (!dropdown.classList.contains('active')) {
+    dropdown.classList.add('active');
+  } else {
+    dropdown.classList.remove('active');
+  }
+}
+

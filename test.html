@@ -1,115 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Services</title>
+    <title>Document</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Mobile Navigation Styles */
+.nav-mobile {
+  position: fixed;
+  inset: 0 0 0 30%;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+  background-color: #485664;
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  height: 100vh;
+  opacity: .98;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.4s ease;
+  overflow-y: auto;
+}
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+.nav-mobile.active {
+  display: flex;
+  transition: all 0.4s ease;
+}
 
-        main {
-            
-            padding: 20px;
-            
-        }
+.nav-mobile div {
+  margin-top: 10px;
+  cursor: pointer;
+}
 
-        .registration-box {
-            flex: 1;
-            margin: 15px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-        }
+.nav-mobile li {
+  padding: 10px;
+}
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+.nav-mobile li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-mobile li a:active {
+  background-color: #ff6600;
+  border-radius: 10px;
+}
+
+/* Dropdown Styles */
+.nav-dropdown {
+  display: none;
+  position: relative;
+  color: #fff;
+  list-style: none;
+}
+
+.nav-dropdown.active {
+  display: block;
+}
+
+/* Nested Dropdown Styles */
+.nav-nested-dropdown {
+  display: none;
+  position: relative;
+  color: #fff;
+  list-style: none;
+  padding-left: 15px; /* Adjust indentation as needed */
+}
+
+.nav-nested-dropdown.active {
+  display: block;
+}
+
+/* Additional Styling (adjust as needed) */
+.nav-mobile a {
+  transition: color 0.3s ease;
+}
+
+.nav-mobile a:hover {
+  color: #ff6600;
+}
+
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Registration Services</h1>
-    </header>
-
-    <main class="col col-lg-4">
-        <div class="registration-box">
-            <h2>Company Registration</h2>
-            <p>Get your company registered with ease.</p>
-            <p>Price: $X</p>
-        </div>
-
-        <div class="registration-box">
-            <h2>LLP Registration</h2>
-            <p>Register your Limited Liability Partnership.</p>
-            <p>Price: $Y</p>
-        </div>
-        <div class="registration-box">
-          <h2>LLP Registration</h2>
-          <p>Register your Limited Liability Partnership.</p>
-          <p>Price: $Y</p>
+    <div>
+        <ul id="nav-mobile" class="nav-mobile">
+          <div onclick="removeMobileNav()">
+            <!-- Close button icon -->
+          </div>
+          <li onclick="removeMobileNav"><a href="#about">About Us</a></li>
+          <li onclick="toggleDropdown('services-dropdown')">
+            <a>Services
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+              </svg>
+            </a>
+            <ul id="services-dropdown" class="nav-dropdown">
+              <li onclick="toggleNestedDropdown('registration-dropdown')">
+                <a href="#registration">Registration
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                  </svg>
+                </a>
+                <ul id="registration-dropdown" class="nav-dropdown">
+                  <li><a href="#company-registration">Company Registration</a></li>
+                  <li><a href="#llp-registration">LLP Registration</a></li>
+                  <!-- Add more registration items as needed -->
+                </ul>
+              </li>
+              <li onclick="toggleNestedDropdown('filling-dropdown')">
+                <a href="#filling">Filling
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                  </svg>
+                </a>
+                <ul id="filling-dropdown" class="nav-dropdown">
+                  <li><a href="#income-tax-filing">Income Tax Filing</a></li>
+                  <li><a href="#gst-return-filing">GST Return Filing</a></li>
+                  <!-- Add more filling items as needed -->
+                </ul>
+              </li>
+              <!-- Add more service items as needed -->
+            </ul>
+          </li>
+          <li onclick="removeMobileNav"><a href="#dsc">DSC</a></li>
+          <li onclick="removeMobileNav"><a href="#contact">Contact Us</a></li>
+        </ul>
       </div>
+<script>
+    // Function to open the mobile navigation
+function mobileNav() {
+  var mobileMenu = document.getElementById("nav-mobile");
+  mobileMenu.classList.add('active');
+}
 
-      <div class="registration-box">
-        <h2>LLP Registration</h2>
-        <p>Register your Limited Liability Partnership.</p>
-        <p>Price: $Y</p>
-    </div>
+// Function to close the mobile navigation
+function removeMobileNav() {
+  var mobileMenu = document.getElementById("nav-mobile");
+  mobileMenu.classList.remove('active');
+}
 
-    <div class="registration-box">
-      <h2>LLP Registration</h2>
-      <p>Register your Limited Liability Partnership.</p>
-      <p>Price: $Y</p>
-  </div>
+// Function to toggle the visibility of the main dropdown
+function toggleDropdown(dropdownId) {
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle('active');
+}
 
-  <div class="registration-box">
-    <h2>LLP Registration</h2>
-    <p>Register your Limited Liability Partnership.</p>
-    <p>Price: $Y</p>
-</div>
+// Function to toggle the visibility of nested dropdowns
+function toggleNestedDropdown(nestedDropdownId) {
+  var nestedDropdown = document.getElementById(nestedDropdownId);
+  nestedDropdown.classList.toggle('active');
+}
 
-<div class="registration-box">
-  <h2>LLP Registration</h2>
-  <p>Register your Limited Liability Partnership.</p>
-  <p>Price: $Y</p>
-</div>
+// Event listener to close the mobile navigation when a link is clicked
+var navLinks = document.querySelectorAll('.nav-mobile a');
+navLinks.forEach(function (link) {
+  link.addEventListener('click', removeMobileNav);
+});
 
-<div class="registration-box">
-  <h2>LLP Registration</h2>
-  <p>Register your Limited Liability Partnership.</p>
-  <p>Price: $Y</p>
-</div>
-
-
-        <!-- Add more registration boxes for other services -->
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
-    </footer>
-
+</script>      
+    
 </body>
 </html>

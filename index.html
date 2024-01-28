@@ -15,7 +15,6 @@
   </head>
   <body>
     
-
     <header id="mainNav">
       
       <div onclick="topFunction()" id="home-logo">
@@ -103,18 +102,18 @@
         </svg>
       </div>
       <li onclick="removeMobileNav"><a href="#about">About Us</a></li>
-      <li onclick="navDropdown()">
+      <li onclick="toggleDropdown('services')">
         <a>Services
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
           </svg>
         </a>
-        <ul id="nav-dropdown">
-          <li onclick="toggleDropdown()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <ul id="nav-dropdown-services">
+          <li onclick="toggleDropdown2('registration','services')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
           </svg><a href="#registration">Registration</a>
         
-          <ul id="nav-dropdown-ul-other" >
+          <ul id="nav-dropdown-registration">
             <li><a>Company Registration</a></li>
             <li><a>LLP Registration</a></li>
             <li><a>Partnership Firm Registration</a></li>
@@ -131,19 +130,19 @@
             <li><a>FSSAI Registration</a></li>
           </ul>
         </li>
-          <li onclick="toggleDropdown()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <li onclick="toggleDropdown2('fillings','services')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
           </svg><a href="#filling">Filling</a>
-          <ul id="nav-dropdown-ul-other" >
+          <ul id="nav-dropdown-fillings" >
             <li><a>Income Tax Filing</a></li>
             <li><a>GST Return Filing</a></li>
             <li><a>PF & ESI Filing</a></li>
           </ul>
         </li>
-          <li onclick="toggleDropdown()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <li onclick="toggleDropdown2('others','services')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
           </svg><a href="#other-services">Other Services</a>
-          <ul id="nav-dropdown-ul-other" >
+          <ul id="nav-dropdown-others" >
             <li><a>All Types of Digital Signature Certificates(DSC)</a></li>
             <li><a>Trademark Objection Filing</a></li>
             <li><a>80G & 12A Registration</a></li>
