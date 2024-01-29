@@ -562,8 +562,9 @@ header.scrolled{
   }
     
   .about .about-img {
-    position: relative;
+    display: flex;
     margin: 60px 0 0 60px;
+    align-items: center;
   }
   .about .tab-content h4 {
     font-size: 18px;
@@ -576,19 +577,11 @@ header.scrolled{
     font-size: 22px;
     line-height: 0;
     margin-right: 8px;
-    color: var(--color-primary);
+    color: #333;
   }
   
   
-  .about .about-img:before {
-    position: absolute;
-    inset: -60px 0 0 -60px;
-    z-index: -1;
-    content: "";
-    background: url("/img/about-bg.png") top left;
-    background-repeat: no-repeat;
-  }
-  
+
   @media only screen and (max-width: 768px) {
     .about .about-img {
       margin: 30px 0 0 30px;
@@ -730,6 +723,15 @@ header.scrolled{
 }
 .services-tab-content p{
   font-size: 18px;
+}
+
+.know-more{
+  padding: 10px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
 }
 .nav-mobile{
   display: none;
