@@ -1,0 +1,31 @@
+
+h5{
+    font-size: 20px;
+    
+}
+    
+
+.registration-container {
+
+    border: 1px solid #ccc;
+    padding: 0px 10px 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px 10px 10px 0px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+}
+
+.registration-container img {
+    max-width: 70%;
+    height: auto;
+
+}
+
+/* Additional styling for hover effect */
+.registration-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.registration-container:hover {
+    transform: scale(1.05);
+}

@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const heroElement = document.querySelector(".hero-animated");
     heroElement.classList.add("fadeIn");
@@ -18,7 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function goToPage(pageUrl) {
+  window.location.href = pageUrl;
+}
 
+function goToLocation(){
+}
 
 function topFunction() {
   document.body.scrollTop = 0;

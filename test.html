@@ -3,166 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Registration Topics</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-/* Mobile Navigation Styles */
-.nav-mobile {
-  position: fixed;
-  inset: 0 0 0 30%;
-  display: none;
-  flex-direction: column;
-  z-index: 999;
-  background-color: #485664;
-  list-style: none;
-  color: #fff;
-  text-decoration: none;
-  height: 100vh;
-  opacity: .98;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  transition: all 0.4s ease;
-  overflow-y: auto;
-}
-
-.nav-mobile.active {
-  display: flex;
-  transition: all 0.4s ease;
-}
-
-.nav-mobile div {
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.nav-mobile li {
-  padding: 10px;
-}
-
-.nav-mobile li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.nav-mobile li a:active {
-  background-color: #ff6600;
-  border-radius: 10px;
-}
-
-/* Dropdown Styles */
-.nav-dropdown {
-  display: none;
-  position: relative;
-  color: #fff;
-  list-style: none;
-}
-
-.nav-dropdown.active {
-  display: block;
-}
-
-/* Nested Dropdown Styles */
-.nav-nested-dropdown {
-  display: none;
-  position: relative;
-  color: #fff;
-  list-style: none;
-  padding-left: 15px; /* Adjust indentation as needed */
-}
-
-.nav-nested-dropdown.active {
-  display: block;
-}
-
-/* Additional Styling (adjust as needed) */
-.nav-mobile a {
-  transition: color 0.3s ease;
-}
-
-.nav-mobile a:hover {
-  color: #ff6600;
-}
-
+       .loader-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .loader {
+        color: #ff6600;
+        width: 4px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+        transform: translateX(-38px);
+        animation: l21 .5s infinite alternate linear;
+      }
+          
+      @keyframes l21 {
+        50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+        100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+      }
+      
     </style>
 </head>
 <body>
-    <div>
-        <ul id="nav-mobile" class="nav-mobile">
-          <div onclick="removeMobileNav()">
-            <!-- Close button icon -->
-          </div>
-          <li onclick="removeMobileNav"><a href="#about">About Us</a></li>
-          <li onclick="toggleDropdown('services-dropdown')">
-            <a>Services
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
-              </svg>
-            </a>
-            <ul id="services-dropdown" class="nav-dropdown">
-              <li onclick="toggleNestedDropdown('registration-dropdown')">
-                <a href="#registration">Registration
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
-                  </svg>
-                </a>
-                <ul id="registration-dropdown" class="nav-dropdown">
-                  <li><a href="#company-registration">Company Registration</a></li>
-                  <li><a href="#llp-registration">LLP Registration</a></li>
-                  <!-- Add more registration items as needed -->
-                </ul>
-              </li>
-              <li onclick="toggleNestedDropdown('filling-dropdown')">
-                <a href="#filling">Filling
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
-                  </svg>
-                </a>
-                <ul id="filling-dropdown" class="nav-dropdown">
-                  <li><a href="#income-tax-filing">Income Tax Filing</a></li>
-                  <li><a href="#gst-return-filing">GST Return Filing</a></li>
-                  <!-- Add more filling items as needed -->
-                </ul>
-              </li>
-              <!-- Add more service items as needed -->
-            </ul>
-          </li>
-          <li onclick="removeMobileNav"><a href="#dsc">DSC</a></li>
-          <li onclick="removeMobileNav"><a href="#contact">Contact Us</a></li>
-        </ul>
+    <div class="loader-container">
+        <div class="loader"></div>
       </div>
+      
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    // Function to open the mobile navigation
-function mobileNav() {
-  var mobileMenu = document.getElementById("nav-mobile");
-  mobileMenu.classList.add('active');
+    // Simulate content loading (you can replace this with your actual content loading logic)
+function simulateContentLoading() {
+  setTimeout(function () {
+    // Once loading is complete, hide the loading container and show the content container
+    document.getElementById('loading-container').style.display = 'none';
+    document.getElementById('content-container').style.display = 'block';
+  }, 2000); // Adjust the time to simulate loading duration
 }
 
-// Function to close the mobile navigation
-function removeMobileNav() {
-  var mobileMenu = document.getElementById("nav-mobile");
-  mobileMenu.classList.remove('active');
-}
+// Call the function to start the loading animation
+simulateContentLoading();
 
-// Function to toggle the visibility of the main dropdown
-function toggleDropdown(dropdownId) {
-  var dropdown = document.getElementById(dropdownId);
-  dropdown.classList.toggle('active');
-}
-
-// Function to toggle the visibility of nested dropdowns
-function toggleNestedDropdown(nestedDropdownId) {
-  var nestedDropdown = document.getElementById(nestedDropdownId);
-  nestedDropdown.classList.toggle('active');
-}
-
-// Event listener to close the mobile navigation when a link is clicked
-var navLinks = document.querySelectorAll('.nav-mobile a');
-navLinks.forEach(function (link) {
-  link.addEventListener('click', removeMobileNav);
-});
-
-</script>      
-    
+</script>
 </body>
 </html>

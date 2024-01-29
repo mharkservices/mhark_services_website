@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+
 html, body {
   overflow-x: hidden;
 }
@@ -18,6 +19,7 @@ main{
   max-width: 1400px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 70px;
 }
 header {
   width: 100%;
@@ -38,7 +40,7 @@ header {
 
 
 header.scrolled{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -91,6 +93,7 @@ header.scrolled{
     color: #fff;
     border-radius: 10px;
     opacity: 1.2;
+    transition: all .6 ease;
   }
 
 
@@ -116,9 +119,16 @@ header.scrolled{
 .nav_links li:hover ul.services-dropdown li{
   display: block;
 }
+.nav_links li:hover > a{
+  background-color: #ff6600;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 1.2;
+}
+
 
 .nav_links li ul.services-dropdown{
-  box-shadow:  0px 4px 8px 0px #c3c2c2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-color: #fff;
   position: absolute;
   z-index: 10;
@@ -137,7 +147,7 @@ header.scrolled{
   color: #fff;
   border-radius: 10px;
   padding: 10px;
-  transition: background-color 0.3;
+  transition: background-color 0.3 ease;
 }
 
 .services-dropdown li:hover a{
@@ -149,7 +159,7 @@ header.scrolled{
 .services-dropdown li ul{
   width: 220px;
   display: none;
-  box-shadow:  0px 4px 8px 0px #c3c2c2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-color: #fff;
   z-index: 10;
   display: none;
@@ -162,8 +172,7 @@ header.scrolled{
   
   max-height: 400px; 
   overflow-y: auto; 
-  background-color: #fff; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  background-color: #fff;  
   border: 1px solid #ddd; 
 
 }
@@ -243,7 +252,7 @@ header.scrolled{
   flex-direction: row;
   justify-content: center;
   animation: fadeIn 3s ease-in-out;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
   
@@ -388,7 +397,7 @@ header.scrolled{
   }
   .nav-mobile{
     position: fixed;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 20%;
     display: none;
     flex-direction: column;
     z-index: 999;
@@ -402,6 +411,7 @@ header.scrolled{
     border-bottom-left-radius: 10px;
     transition: all 0.4s ease;
     overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
 
   .nav-mobile.active{
@@ -428,16 +438,17 @@ header.scrolled{
     border-radius: 10px;
 
   }
-    
  
   #nav-dropdown-services,
   #nav-dropdown-registration,
   #nav-dropdown-fillings,
   #nav-dropdown-others {
     display: none;
-    position: relative; /* or position: absolute; */
+    position: relative; 
     color: #fff;
     list-style: none;
+    
+    transition: all 0.6s ease-in-out;
   }
   
   #nav-dropdown-services.active,
@@ -445,6 +456,7 @@ header.scrolled{
   #nav-dropdown-fillings.active,
   #nav-dropdown-others.active {
     display: block;
+    transition: all 0.6s ease-in-out;
   }
    #nav-mobile li {
     position: relative;
@@ -848,7 +860,7 @@ header.scrolled{
 
 .contact .info {
   padding: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   border-radius: 20px;
   overflow: hidden;
   margin: 10px;
